@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 20px 40px;
+    transform: translate(-50%,-50%);
+    border-radius: 60px 5px;
+    box-shadow: 10px 10px 10px #dbcfdd;
+    overflow: hidden;
+    z-index: 0;
+}
+.container::before
+{
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+  animation: rotate 4s linear infinite;
+  z-index: -2;
+}
+.container::after
+{
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background: white;
+  border-radius: 55px 5px;
+  z-index: -1;
+}
+@keyframes rotate
+{
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+.container span
+{
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: #091f36;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+.container p
+{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.container input
+{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #494eea;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+.container button
+{
+    width: 100%;
+    height: 40px;
+    background: #1d1dc3;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.container button:active
+{
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+.Box
+{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+.Box img
+{
+    width: 100%;
+    padding: 10px;
+}
+.Box.display-Image
+{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #3857e2;
+}
+.show-error
+{
+    animation: animate 0.1s linear 10;
+    /* This will animate 10 times */
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    25%
+    {
+        transform: translateX(-2px);
+    }
+    50%
+    {
+        transform: translateX(0);
+    }
+    75%
+    {
+        transform: translateX(2px);
+    }
+    100%
+    {
+        transform: translateX(0);
+    }
+}

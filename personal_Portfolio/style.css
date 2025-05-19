@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&dsplay=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #ececec;
+    --secondary-color: #070707;
+    --tertiary-color: #c5d1dd;
+    --quaternary-color: #0310ea;
+}
+
+.dark-theme {
+    --primary-color: #070707;
+    --secondary-color: #ececec;
+    --tertiary-color: #0f0f0f;
+    --quaternary-color: #ef0888;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    position: relative;
+}
+nav {
+    width: 100%;
+    margin: auto;
+    background-color: var(--tertiary-color);
+    padding: 5px 90px 5px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo-box p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ef0888;
+}
+.logo-img {
+    width: 70px;
+    height: auto;
+    margin-top: 5px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+.active, nav ul li a:hover {
+    color: var(--quaternary-color);
+}
+#myId {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #1f51ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+#myId:hover {
+    background-color: #0707b1;
+}
+#icon {
+    width: 25px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+.info {
+    margin-left: 8%;
+    margin-top: 15%;
+}
+.info h1 {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+}
+.info h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+.info p {
+    color: var(--secondary-color);
+    line-height: 22px;
+}
+#_001 {
+    color: #1f51ff;
+}
+#_002 {
+    color: #1f51ff;
+}
+.info button {
+    padding: 10px 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 5px;
+    border: 3px double transparent;
+    background-image: linear-gradient(#0d0e21, #0d0e21), radial-gradient(circle at left top, #1f51ff, #ef0888);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.info button:hover {
+    box-shadow: rgba(113, 55, 223, 0.5) 0px 0px 30px 0px;
+}
+.img-box {
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    bottom: 0;
+    right: 20px;
+}
+.img-box img {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.back-img {
+    width: 72%;
+}
+.img-box:hover .back-img {
+    bottom: 40px;
+}
+.img-box:hover .front-img {
+    left: 53%;
+}
+.social-links {
+    margin-left: 8%;
+    margin-top: 110px;
+}
+.social-links a {
+    font-size: 25px;
+    color: var(--secondary-color);
+    margin-right: 12px;
+}
+.social-links a:hover {
+    color: #ce0000;
+}

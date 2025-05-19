@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&dsplay=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #424242;
+}
+.container
+{
+    position: relative;
+    width: 400px;
+    height: 570px;
+    background: #1c1c1c;
+    border-radius: 70px 5px;
+    overflow: hidden;
+}
+.container::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 570px;
+    background: linear-gradient(45deg, transparent, #0ff0fc, #0ff0fc);
+    transform-origin: bottom right;
+    animation: animate 8s linear infinite;
+}
+.container::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 400px;
+    height: 570px;
+    background: linear-gradient(45deg, transparent, #ff00fa, #ff00fa);
+    transform-origin: bottom right;
+    animation: animate 8s linear infinite;
+    animation-delay: -4s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.content
+{
+    position: absolute;
+    inset: 2px;
+    background: #424242;
+    border-radius: 70px 5px;
+    z-index: 1;
+}
+form
+{
+    position: absolute;
+    padding: 20px 30px;
+}
+form h1
+{
+    color: #d79922;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+form .inputBox
+{
+    position: relative;
+    padding: 10px 0;
+}
+form .inputBox:first-of-type
+{
+    padding-top: 0;
+}
+form .inputBox:last-of-type
+{
+    padding-bottom: 0;
+}
+form .inputBox input
+{
+    position: relative;
+    width: 340px;
+    padding: 10px 20px;
+    background-color: #022140;
+    border: 1px solid #d79922;
+    font-size: 18px;
+    font-weight: 300;
+    color: #d79922;
+    letter-spacing: 0.01em;
+    border-radius: 60px;
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+form .inputBox label
+{
+    position: absolute;
+    display: block;
+    padding: 10px 20px;
+    margin-top: -48px;
+    font-size: 18px;
+    color: #d79922;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    transform-origin: left center;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+form button
+{
+    position: absolute;
+    margin-top: 25px;
+    padding: 20px 15px;
+    background-color: #022140;
+    border: 1px solid #d79922;
+    line-height: 0;
+    font-size: 18px;
+    color: #d79922;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    border-radius: 60px;
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+form .inputBox input:focus
+{
+    margin-top: 20px;
+    outline: none;
+    background: #d79922;
+    border: 1px solid #022140;
+    color: #022140;
+}
+form .inputBox input:valid
+{
+    margin-top: 20px;
+}
+form .inputBox input:focus ~ label
+{
+    transform: translate(0, -35px);
+}
+form .inputBox input:valid ~ label
+{
+    text-transform: uppercase;
+    font-style: italic;
+    transform: translate(5px, -35px) scale(0.7);
+}
+form button:hover, form button:focus
+{
+    color: #022140;
+    background-color: #d79922;
+    border: 1px solid #022140;
+    cursor: pointer;
+}
+.content .seperator
+{
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+    width: 340px;
+    border-top: 1px dotted #d79922;
+    text-align: center;
+}
+.content .seperator b
+{
+    position: relative;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    background: #022140;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #d79922;
+    line-height: 38px;
+    display: inline-block;
+    border: 1px solid #d79922;
+}
+.content p
+{
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #d79922;
+}
+.content .wrapper
+{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-brands
+{
+    margin: 0.4rem;
+    color: #d79922;
+    font-size: 2rem;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+.fa-brands:hover
+{
+    color: #022140;
+    filter: drop-shadow(0 0 20px rgba(215, 153, 34, 1));
+    transform: scale(1.2);
+}

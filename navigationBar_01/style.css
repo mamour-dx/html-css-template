@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(75deg, #0049B7, #EC449B);
+}
+.navigation
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.navigation.active
+{
+    width: 600px;
+}
+.navigation .toggleBtn
+{
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #0049B7;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.navigation.active .toggleBtn
+{
+    background: #0049B7;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transition-delay: 0s;
+    transform: translateY(60px);
+}
+.navigation .toggleBtn::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.navigation .toggleBtn::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #fff;
+    transform: translateY(0px) rotate(90deg);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.navigation.active .toggleBtn::before
+{
+    background: #fff;
+    transition-delay: 0s;
+    transform: translateY(0px) rotate(45deg) scale(0.6);
+}
+.navigation.active .toggleBtn::after
+{
+    background: #fff;
+    transition-delay: 0s;
+    transform: translateY(0px) rotate(315deg) scale(0.6);
+}
+.navigation li
+{
+    list-style: none;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.navigation.active li
+{
+    display: flex;
+    transition-delay: 0.75s;
+    transform: scale(1);
+}
+.navigation li a
+{
+    text-decoration: none;
+    background: transparent;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0 rgba(255,255,255,0.5),
+                7px 7px 20px 0 rgba(0,0,0,0.1),
+                4px 4px 5px 0 rgba(0,0,0,0.1);
+}
+.navigation li a:hover
+{
+    background: #0049B7;
+    color: #fff;
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,0.5),
+               -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+    inset -4px -4px 6px 0 rgba(255,255,255,0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+}

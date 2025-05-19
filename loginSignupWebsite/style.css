@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&dsplay=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(assets/image.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    background-color: #000;
+    padding: 5px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+.logo-box p {
+    margin-left: 12px;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #ff7200;
+    line-height: 25px;
+    user-select: none;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.login-popup-btn {
+    padding: 10px 40px;
+    font-size: 1.1em;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #fff;
+    border: 3px double transparent;
+    background-image: linear-gradient(#0d0e21, #0d0e21), radial-gradient(circle at left top, #ff7200, #d900c0);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+}
+
+.login-popup-btn:hover {
+    box-shadow: rgba(255, 114, 0, 0.5) 0 0 20px 0;
+}
+
+.container {
+    position: absolute;
+    width: 390px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid rgba(255, 114, 0, 0.5);
+    box-shadow: 0 0 5px rgba(255, 114, 0, 0.3);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease, transform 0.5s ease;
+}
+
+.container.display-popup {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.container.sign-up {
+    height: 530px;
+}
+
+.container .form-box.login-form {
+    /* display: none; */
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.container .form-box.signup-form {
+    position: absolute;
+    transform: translateY(500px);
+}
+
+.container.sign-up .form-box.login-form {
+    transform: translateY(500px);
+    transition: none;
+}
+
+.container.sign-up .form-box.signup-form {
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.container .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    background: #ff7200;
+    font-size: 1.8em;
+    color: #0d0e21;
+    border-bottom-left-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+h2 {
+    color: #ff7200;
+    font-size: 2.4em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 20px 45px 5px 3px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background: linear-gradient(to top, #ff7200 50%, #ff7200 50%);
+    background-size: 0 1px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in-out;
+}
+
+.inputBox input:hover {
+    border-color: #ff7200;
+}
+
+.inputBox input:focus {
+    border-color: #ff7200;
+    background-position: left bottom;
+    background-size: 100% 1px;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    color: #fff;
+    font-size: 1.1em;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.inputBox ion-icon {
+    position: absolute;
+    color: #fff;
+    top: 20px;
+    right: 2px;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+    transform: translate(-5px, -30px);
+    color: #ff7200;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.inputBox input:focus~ion-icon,
+.inputBox input:valid~ion-icon {
+    color: #ff7200;
+    transform: scale(1.2);
+}
+
+.forget {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forget input {
+    display: none;
+    cursor: pointer;
+}
+
+.forget label {
+    position: relative;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.forget label::before {
+    content: "";
+    position: relative;
+    border: 2px solid #fff;
+    padding: 8px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.forget input:checked+label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    width: 5px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.forget a {
+    color: #fff;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    color: #ff7200;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.login-btn,
+.signup-btn {
+    width: 100%;
+    margin-top: 35px;
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    color: #fff;
+    border: 3px double transparent;
+    background-image: linear-gradient(#0d0e21, #0d0e21), radial-gradient(circle at left top, #ff7200, #d900c0);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    box-shadow: rgba(255, 114, 0, 0.5) 0 0 20px 0;
+    letter-spacing: 3px;
+}
+
+.register {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.register p {
+    color: #fff;
+    font-size: 1em;
+}
+
+.register a {
+    color: #ff7200;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

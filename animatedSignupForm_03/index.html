@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation in HTML CSS & JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Box">
+            <header class="form-header">
+                <h2>signup</h2>
+            </header>
+
+            <main class="form-body">
+                <form action="#">
+                    <div>
+                        <label for="uname">Username :</label>
+                        <input type="text" id="uname" placeholder="Enter name" autocomplete="off">
+                        <span id="nameError"></span>
+                        <i class="fa-solid" id="_001"></i>
+                    </div>
+                    <div>
+                        <label for="email">Email Address :</label>
+                        <input type="email" id="email" placeholder="abc@gmail.com" autocomplete="off">
+                        <span id="emailError"></span>
+                        <i class="fa-solid" id="_002"></i>
+                    </div>
+                    <div>
+                        <label for="cr_pass">Create Password :</label>
+                        <input type="password" id="cr_pass" placeholder="atleast 8 characters">
+                        <span id="passError"></span>
+                        <i class="fa-solid" id="_003"></i>
+                    </div>
+                    <div>
+                        <label for="con_pass">Confirm Password :</label>
+                        <input type="password" id="con_pass" placeholder="Re-enter password">
+                        <span id="rePassError"></span>
+                        <i class="fa-solid" id="_004"></i>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" id="submitBtn">
+                    </div>
+                </form>
+            </main>
+
+            <footer class="form-footer">
+                <p>Already have an account? <a href="#">Login</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/af0c0b7f27.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&dsplay=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn
+{
+    position: relative;
+    width: 170px;
+    top: 250px;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(120deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    display: block;
+    overflow: hidden;
+}
+.btn span
+{
+    padding: 10px;
+    margin: 3px;
+    font-size: 24px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: block;
+    background: #000;
+}
+.btn:hover
+{
+    animation: animate 1.6s ease-in infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0px;
+    }
+    20%
+    {
+        background-position: -110px;
+    }
+    35%
+    {
+        background-position: -180px;
+    }
+    50%
+    {
+        background-position: -210px;
+    }
+    80%
+    {
+        background-position: -350px;
+    }
+    100%
+    {
+        background-position: -390px;
+    }
+}
+.popup
+{
+    position: absolute;
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    left: 50%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    transform: translate(-50%,-50%) scale(0.1);
+    transition: transform 0.4s, top 0.4s;
+    visibility: hidden;
+}
+.display-popup
+{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+.popup img
+{
+    width: 90px;
+    margin-top: -45px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.popup h2
+{
+    font-size: 40px;
+    font-weight: 600;
+    margin: 30px 0 10px;
+    color: #4fcf70;
+}
+.popup p
+{
+    font-size: 20px;
+}
+.popup button
+{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #005cb9;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}

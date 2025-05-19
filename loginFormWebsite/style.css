@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(11, 0, 95, 0.8), rgba(11, 0, 95, 0.8)), url(myImage/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    width: 100%;
+    padding: 0 6%;
+    background: linear-gradient(rgba(11, 0, 95, 0.7), rgba(11, 0, 95, 0.7));
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 120%;
+    left: 0;
+    background: #ff7200;
+    transition: 0.5s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 120%;
+    right: 0;
+    background: aqua;
+    transition: 0.5s;
+}
+
+li:hover a::before {
+    width: 50%;
+    transform: translate(100%);
+}
+
+li:hover a::after {
+    width: 50%;
+    transform: translate(-100%);
+}
+
+nav ul li button {
+    padding: 12px 22px;
+    font-size: 17px;
+    font-weight: 700;
+    color: aqua;
+    background: #27282b;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid aqua;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li button:hover {
+    background-color: aqua;
+    color: #0b005f;
+}
+
+.wrapper {
+    margin: 0 6%;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 35vh;
+}
+
+.content {
+    margin-left: 30px;
+    margin-top: -100px;
+}
+
+.content h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 65px;
+}
+
+.content h1 span#_001 {
+    color: #ff7200;
+    font-size: 55px;
+}
+
+.content h1 span#_002 {
+    color: #ff7200;
+    font-size: 65px;
+}
+
+.content p {
+    color: #fff;
+    font-size: 21px;
+}
+
+.content form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.content form input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.content form .btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #ff7200;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wrapper .form-box {
+    margin-left: 150px;
+    width: 400px;
+    height: 470px;
+    background: linear-gradient(rgba(11, 0, 95, 0.75), rgba(11, 0, 95, 0.75));
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box form h2 {
+    color: #ff7200;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-box form .inputBox {
+    width: 300px;
+    margin-top: 55px;
+    position: relative;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 0 20px 0 5px;
+    font-size: 17px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid silver;
+}
+
+.inputBox label {
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    left: 5px;
+    top: -5px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+    transform: translate(-5px, -25px);
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff7200;
+}
+
+.form-box .forgot {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-box .forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-box .forgot a:hover {
+    text-decoration: underline;
+    color: #ff7200;
+}
+
+.form-box .login-btn {
+    width: 100%;
+    margin-top: 35px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 0;
+    background: #ff7200;
+    color: #0b005f;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.form-box .login-btn:hover {
+    background: #fff;
+    letter-spacing: 3px;
+}
+
+.form-box .register {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-box .register a {
+    color: #ff7200;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.form-box .register a:hover {
+    text-decoration: underline;
+}
+
+.form-box .icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-box .icons p {
+    color: #fff;
+}
+
+.form-box .icons .social-inks {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-box .icons .social-inks a {
+    color: #fff;
+    font-size: 30px;
+    transition: 0.4s;
+}
+
+.form-box .icons .social-inks a:hover {
+    color: #ff7200;
+}
